@@ -13,7 +13,7 @@ class Estudiante
     data = []
     File.open(filename, 'r') { |file| data = file.readlines  }
     data.each do |estudiante|
-    estudiantes << Estudiante.new(estudiante.split(','))
+    estudiantes << Estudiante.new(*estudiante.split(','))
   end
   puts estudiantes
 end
